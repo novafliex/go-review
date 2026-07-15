@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品管理系统</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #f7f8ff;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      button {
+        border: 0;
+        cursor: pointer;
+      }
+
+      button:disabled,
+      input:disabled {
+        cursor: not-allowed;
+        opacity: 0.58;
+      }
+
+      .app-shell {
+        --bg: #f7f9ff;
+        --bg-accent: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.72);
+        --panel-strong: rgba(255, 255, 255, 0.88);
+        --panel-muted: rgba(248, 250, 255, 0.72);
+        --panel-border: rgba(100, 116, 139, 0.18);
+        --heading: #0f172a;
+        --text: #1f2937;
+        --muted: #64748b;
+        --subtle: #94a3b8;
+        --input: rgba(255, 255, 255, 0.76);
+        --input-border: rgba(148, 163, 184, 0.34);
+        --table-head: rgba(248, 250, 252, 0.7);
+        --table-hover: rgba(99, 102, 241, 0.06);
+        --primary: #635bff;
+        --primary-hover: #5147f5;
+        --primary-soft: rgba(99, 91, 255, 0.1);
+        --danger: #e5484d;
+        --danger-hover: #d92d20;
+        --danger-soft: rgba(229, 72, 77, 0.1);
+        --success: #0f9f6e;
+        --success-soft: rgba(15, 159, 110, 0.1);
+        --warning: #b7791f;
+        --warning-soft: rgba(245, 158, 11, 0.12);
+        --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+        --shadow-hover: 0 22px 60px rgba(65, 73, 117, 0.14);
+        --ring: rgba(99, 91, 255, 0.18);
+
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        color: var(--text);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
+          linear-gradient(135deg, #f9fbff 0%, var(--bg-accent) 44%, #f8f3ff 100%);
+        transition:
+          color 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .app-shell::before {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 0;
+        height: 360px;
+        pointer-events: none;
+        content: "";
+        background:
+          linear-gradient(100deg, rgba(79, 70, 229, 0.1), transparent 34%),
+          linear-gradient(280deg, rgba(168, 85, 247, 0.14), transparent 38%);
+        filter: blur(18px);
+      }
+
+      .app-shell[data-theme="dark"] {
+        --bg: #050816;
+        --bg-accent: #0b1020;
+        --panel: rgba(15, 23, 42, 0.72);
+        --panel-strong: rgba(15, 23, 42, 0.86);
+        --panel-muted: rgba(17, 24, 39, 0.58);
+        --panel-border: rgba(148, 163, 184, 0.18);
+        --heading: #f8fafc;
+        --text: #e5e7eb;
+        --muted: #9aa4b8;
+        --subtle: #69758b;
+        --input: rgba(2, 6, 23, 0.5);
+        --input-border: rgba(148, 163, 184, 0.22);
+        --table-head: rgba(15, 23, 42, 0.62);
+        --table-hover: rgba(124, 58, 237, 0.12);
+        --primary: #9b8cff;
+        --primary-hover: #b3a8ff;
+        --primary-soft: rgba(155, 140, 255, 0.13);
+        --danger: #ff6b6b;
+        --danger-hover: #ff8585;
+        --danger-soft: rgba(255, 107, 107, 0.12);
+        --success: #72e4b8;
+        --success-soft: rgba(114, 228, 184, 0.12);
+        --warning: #f7c948;
+        --warning-soft: rgba(247, 201, 72, 0.13);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+        --shadow-hover: 0 26px 84px rgba(21, 16, 48, 0.48);
+        --ring: rgba(155, 140, 255, 0.26);
+
+        background:
+          linear-gradient(180deg, rgba(24, 18, 52, 0.62), rgba(5, 8, 22, 0.18) 36%),
+          linear-gradient(135deg, #050816 0%, #07111f 52%, #120a24 100%);
+      }
+
+      .app-shell[data-theme="dark"]::before {
+        background:
+          linear-gradient(105deg, rgba(59, 130, 246, 0.12), transparent 36%),
+          linear-gradient(280deg, rgba(168, 85, 247, 0.18), transparent 42%);
+        filter: blur(22px);
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 52px;
+      }
+
+      .header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 168px;
+        margin-bottom: 18px;
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        padding: 28px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42)),
+          var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px) saturate(145%);
+      }
+
+      .app-shell[data-theme="dark"] .header {
+        background:
+          linear-gradient(135deg, rgba(30, 41, 59, 0.74), rgba(15, 23, 42, 0.52)),
+          var(--panel);
+      }
+
+      .title {
+        margin: 0 0 10px;
+        color: var(--heading);
+        font-size: 34px;
+        line-height: 1.18;
+        font-weight: 760;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        max-width: 640px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .header-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .status-pill,
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 38px;
+        border-radius: 999px;
+        padding: 0 14px;
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .status-pill {
+        border: 1px solid rgba(99, 91, 255, 0.22);
+        color: var(--primary);
+        background: var(--primary-soft);
+      }
+
+      .theme-toggle {
+        border: 1px solid var(--panel-border);
+        color: var(--text);
+        background: var(--panel-strong);
+        box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+        transition:
+          transform 0.16s ease,
+          border-color 0.16s ease,
+          background 0.16s ease;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-1px);
+        border-color: rgba(99, 91, 255, 0.34);
+        background: var(--panel);
+      }
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--success);
+        box-shadow: 0 0 0 4px var(--success-soft);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 20px;
+      }
+
+      .stat-card {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        padding: 18px 18px 16px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(16px) saturate(135%);
+      }
+
+      .stat-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 2px;
+        content: "";
+        background: linear-gradient(90deg, #60a5fa, #8b5cf6);
+      }
+
+      .stat-card:nth-child(2)::before {
+        background: linear-gradient(90deg, #22c55e, #38bdf8);
+      }
+
+      .stat-card:nth-child(3)::before {
+        background: linear-gradient(90deg, #f59e0b, #ec4899);
+      }
+
+      .stat-label {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .stat-value {
+        margin: 0;
+        color: var(--heading);
+        font-size: 25px;
+        font-weight: 780;
+        line-height: 1.18;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(360px, 400px) minmax(0, 1fr);
+        gap: 20px;
+        align-items: stretch;
+        min-height: 620px;
+      }
+
+      .layout > .panel {
+        display: flex;
+        flex-direction: column;
+        height: 620px;
+        min-height: 560px;
+      }
+
+      .panel {
+        overflow: hidden;
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px) saturate(140%);
+        transition:
+          transform 0.18s ease,
+          border-color 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      .panel:hover {
+        transform: translateY(-1px);
+        border-color: rgba(99, 91, 255, 0.22);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .panel-header {
+        flex: 0 0 auto;
+        padding: 22px 22px 0;
+      }
+
+      .panel-title {
+        margin: 0;
+        color: var(--heading);
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 760;
+      }
+
+      .panel-desc {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .form {
+        flex: 0 0 auto;
+        display: grid;
+        gap: 16px;
+        padding: 20px 22px 22px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .field input {
+        width: 100%;
+        min-height: 42px;
+        border: 1px solid var(--input-border);
+        border-radius: 8px;
+        padding: 10px 12px;
+        color: var(--text);
+        background: var(--input);
+        outline: none;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        transition:
+          border-color 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+      }
+
+      .field input::placeholder {
+        color: var(--subtle);
+      }
+
+      .field input:hover {
+        border-color: rgba(99, 91, 255, 0.42);
+      }
+
+      .field input:focus {
+        border-color: var(--primary);
+        box-shadow:
+          0 0 0 4px var(--ring),
+          inset 0 1px 0 rgba(255, 255, 255, 0.46);
+      }
+
+      .field input:disabled {
+        background: var(--panel-muted);
+      }
+
+      .error-list {
+        display: grid;
+        gap: 6px;
+        margin: 0;
+        padding: 11px 12px;
+        border: 1px solid rgba(229, 72, 77, 0.24);
+        border-radius: 8px;
+        color: var(--danger);
+        background: var(--danger-soft);
+        font-size: 13px;
+        line-height: 1.5;
+        list-style: none;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        align-items: center;
+        margin-top: 2px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        border-radius: 8px;
+        padding: 0 14px;
+        font-size: 13px;
+        font-weight: 740;
+        white-space: nowrap;
+        transition:
+          transform 0.16s ease,
+          box-shadow 0.16s ease,
+          border-color 0.16s ease,
+          color 0.16s ease,
+          background 0.16s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary,
+      .btn-edit {
+        color: #ffffff;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        box-shadow: 0 10px 24px rgba(99, 91, 255, 0.24);
+      }
+
+      .btn-primary:hover,
+      .btn-edit:hover {
+        background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+        box-shadow: 0 12px 30px rgba(99, 91, 255, 0.3);
+      }
+
+      .btn-secondary {
+        border: 1px solid var(--panel-border);
+        color: var(--text);
+        background: var(--panel-strong);
+      }
+
+      .btn-secondary:hover {
+        border-color: rgba(99, 91, 255, 0.28);
+        background: var(--panel);
+      }
+
+      .btn-danger {
+        color: #ffffff;
+        background: linear-gradient(135deg, #ef4444, #e11d48);
+        box-shadow: 0 10px 22px rgba(225, 29, 72, 0.2);
+      }
+
+      .btn-danger:hover {
+        background: linear-gradient(135deg, #dc2626, #be123c);
+      }
+
+      .message {
+        margin: 0 22px 22px;
+        border: 1px solid rgba(15, 159, 110, 0.22);
+        border-radius: 8px;
+        padding: 11px 12px;
+        color: var(--success);
+        background: var(--success-soft);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .message.error {
+        border-color: rgba(229, 72, 77, 0.24);
+        color: var(--danger);
+        background: var(--danger-soft);
+      }
+
+      .message.warning {
+        border-color: rgba(245, 158, 11, 0.24);
+        color: var(--warning);
+        background: var(--warning-soft);
+      }
+
+      .toolbar {
+        flex: 0 0 auto;
+        display: grid;
+        grid-template-columns: minmax(180px, 1fr) minmax(150px, 220px) auto;
+        gap: 13px;
+        align-items: end;
+        padding: 20px 22px;
+        border-bottom: 1px solid var(--panel-border);
+        background: var(--panel-muted);
+      }
+
+      .summary {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 22px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .summary strong {
+        color: var(--primary);
+      }
+
+      .table-wrap {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: auto;
+        overscroll-behavior: contain;
+      }
+
+      table {
+        width: 100%;
+        min-width: 640px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 14px 22px;
+        border-top: 1px solid var(--panel-border);
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        color: var(--muted);
+        background: var(--table-head);
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      tbody tr {
+        transition:
+          background 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+
+      tbody tr:hover {
+        background: var(--table-hover);
+      }
+
+      td {
+        color: var(--text);
+        font-size: 14px;
+      }
+
+      td:first-child {
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .price {
+        font-weight: 780;
+        color: var(--success);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .row-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .empty {
+        min-height: 100%;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        gap: 8px;
+        padding: 54px 24px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--panel-border);
+      }
+
+      .empty-icon {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        color: var(--primary);
+        background: var(--primary-soft);
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .empty-title {
+        color: var(--heading);
+        font-weight: 780;
+      }
+
+      .toast {
+        position: fixed;
+        top: 22px;
+        right: 22px;
+        z-index: 30;
+        max-width: min(380px, calc(100% - 44px));
+        border: 1px solid rgba(15, 159, 110, 0.24);
+        border-radius: 8px;
+        padding: 13px 15px;
+        color: var(--success);
+        background: var(--panel-strong);
+        box-shadow: var(--shadow-hover);
+        backdrop-filter: blur(18px) saturate(150%);
+        font-size: 13px;
+        font-weight: 720;
+      }
+
+      .toast.error {
+        border-color: rgba(229, 72, 77, 0.28);
+        color: var(--danger);
+      }
+
+      .toast.warning {
+        border-color: rgba(245, 158, 11, 0.28);
+        color: var(--warning);
+      }
+
+      .toast-enter-active,
+      .toast-leave-active {
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .toast-enter-from,
+      .toast-leave-to {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      .modal-mask {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background: rgba(8, 13, 26, 0.54);
+        backdrop-filter: blur(14px);
+      }
+
+      .modal {
+        width: min(430px, 100%);
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        padding: 24px;
+        background: var(--panel-strong);
+        box-shadow: var(--shadow-hover);
+        backdrop-filter: blur(18px) saturate(150%);
+      }
+
+      .modal-title {
+        margin: 0 0 10px;
+        color: var(--heading);
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 760;
+      }
+
+      .modal-desc {
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .page {
+          width: min(100% - 24px, 760px);
+          padding: 20px 0 36px;
+        }
+
+        .header {
+          display: grid;
+          align-items: start;
+          min-height: auto;
+          padding: 22px;
+        }
+
+        .title {
+          font-size: 29px;
+        }
+
+        .header-actions {
+          justify-content: flex-start;
+        }
+
+        .stats-grid,
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .layout {
+          min-height: 0;
+        }
+
+        .layout > .panel {
+          height: auto;
+          min-height: 0;
+        }
+
+        .table-wrap {
+          flex: initial;
+          min-height: 0;
+          overflow-x: auto;
+          overflow-y: visible;
+        }
+
+        .toolbar {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          width: min(100% - 18px, 520px);
+          padding-top: 12px;
+        }
+
+        .header,
+        .panel,
+        .stat-card,
+        .modal {
+          border-radius: 8px;
+        }
+
+        .header {
+          padding: 18px;
+        }
+
+        .title {
+          font-size: 25px;
+        }
+
+        .subtitle,
+        .panel-desc {
+          font-size: 13px;
+        }
+
+        .header-actions,
+        .actions,
+        .modal-actions {
+          width: 100%;
+        }
+
+        .theme-toggle,
+        .status-pill,
+        .btn {
+          justify-content: center;
+        }
+
+        .theme-toggle,
+        .btn-primary {
+          width: 100%;
+        }
+
+        .summary {
+          display: grid;
+        }
+
+        .toast {
+          top: 12px;
+          right: 9px;
+          max-width: calc(100% - 18px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="app-shell" :data-theme="theme">
+        <transition name="toast">
+          <div v-if="toast.text" class="toast" :class="toast.type">
+            {{ toast.text }}
+          </div>
+        </transition>
+
+        <div class="page">
+          <header class="header">
+            <div>
+              <h1 class="title">商品管理系统</h1>
+              <p class="subtitle">
+                Vue 3 CDN 单文件前端，已接入 Go Web / Gin / MySQL CRUD 接口。
+              </p>
+            </div>
+            <div class="header-actions">
+              <div class="status-pill">
+                <span class="status-dot"></span>
+                真实接口模式
+              </div>
+              <button class="theme-toggle" type="button" @click="toggleTheme">
+                {{ theme === 'dark' ? '切换浅色模式' : '切换深色模式' }}
+              </button>
+            </div>
+          </header>
+
+          <section class="stats-grid">
+            <div class="stat-card">
+              <p class="stat-label">商品总数</p>
+              <p class="stat-value">{{ products.length }}</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">筛选结果</p>
+              <p class="stat-value">{{ filteredProducts.length }}</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-label">最高价格</p>
+              <p class="stat-value">¥ {{ formatPrice(highestPrice) }}</p>
+            </div>
+          </section>
+
+          <main class="layout">
+            <section class="panel">
+              <div class="panel-header">
+                <h2 class="panel-title">
+                  {{ isEditing ? '编辑商品' : '新增商品' }}
+                </h2>
+                <p class="panel-desc">{{ formDescription }}</p>
+              </div>
+
+              <form class="form" @submit.prevent="handleSubmit">
+                <div class="field">
+                  <label for="productId">商品 ID</label>
+                  <input
+                    id="productId"
+                    v-model.trim="form.id"
+                    type="text"
+                    placeholder="请输入商品 ID"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    :disabled="isEditing || isSubmitting"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="productName">商品名称</label>
+                  <input
+                    id="productName"
+                    v-model.trim="form.name"
+                    type="text"
+                    placeholder="请输入商品名称"
+                    autocomplete="off"
+                    :disabled="isSubmitting"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="productPrice">商品价格</label>
+                  <input
+                    id="productPrice"
+                    v-model.trim="form.price"
+                    type="text"
+                    placeholder="例如：200"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    :disabled="isSubmitting"
+                  />
+                </div>
+
+                <ul v-if="errors.length" class="error-list">
+                  <li v-for="error in errors" :key="error">{{ error }}</li>
+                </ul>
+
+                <div class="actions">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    :disabled="isSubmitting"
+                  >
+                    {{ isSubmitting ? '处理中...' : isEditing ? '保存修改' : '新增商品' }}
+                  </button>
+                  <button
+                    v-if="isEditing"
+                    class="btn btn-secondary"
+                    type="button"
+                    @click="cancelEdit"
+                    :disabled="isSubmitting"
+                  >
+                    取消编辑
+                  </button>
+                </div>
+              </form>
+
+              <p v-if="message.text" class="message" :class="message.type">
+                {{ message.text }}
+              </p>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2 class="panel-title">商品列表</h2>
+                <p class="panel-desc">
+                  可按商品名称和最高价格筛选，新增、修改、删除成功后会自动刷新接口数据。
+                </p>
+              </div>
+
+              <div class="toolbar">
+                <div class="field">
+                  <label for="keyword">商品名称搜索</label>
+                  <input
+                    id="keyword"
+                    v-model.trim="filters.keyword"
+                    type="text"
+                    placeholder="输入商品名称"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="maxPrice">最高价格</label>
+                  <input
+                    id="maxPrice"
+                    v-model.trim="filters.maxPrice"
+                    type="text"
+                    placeholder="例如：1000"
+                    inputmode="decimal"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="actions">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    @click="resetFilters"
+                  >
+                    重置筛选
+                  </button>
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    @click="loadProducts"
+                    :disabled="isLoading"
+                  >
+                    {{ isLoading ? '刷新中...' : '刷新' }}
+                  </button>
+                </div>
+              </div>
+
+              <div class="summary">
+                <span>共 {{ products.length }} 个商品</span>
+                <span>
+                  当前显示 <strong>{{ filteredProducts.length }}</strong> 个
+                </span>
+              </div>
+
+              <div class="table-wrap">
+                <table v-if="filteredProducts.length">
+                  <thead>
+                    <tr>
+                      <th>序号</th>
+                      <th>商品 ID</th>
+                      <th>商品名称</th>
+                      <th>价格</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="(product, index) in filteredProducts"
+                      :key="product.id"
+                    >
+                      <td>{{ index + 1 }}</td>
+                      <td>{{ product.id }}</td>
+                      <td>{{ product.name }}</td>
+                      <td class="price">¥ {{ formatPrice(product.price) }}</td>
+                      <td>
+                        <div class="row-actions">
+                          <button
+                            class="btn btn-edit"
+                            type="button"
+                            @click="startEdit(product)"
+                            :disabled="isSubmitting"
+                          >
+                            编辑
+                          </button>
+                          <button
+                            class="btn btn-danger"
+                            type="button"
+                            @click="confirmDelete(product)"
+                            :disabled="isSubmitting"
+                          >
+                            删除
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div v-else class="empty">
+                  <div class="empty-icon">∅</div>
+                  <div class="empty-title">
+                    {{ isLoading ? '正在加载商品' : '暂无商品' }}
+                  </div>
+                  <div>
+                    {{ isLoading ? '请稍候，正在请求后端接口。' : '可以新增商品，或调整筛选条件后重试。' }}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <div v-if="deleteTarget" class="modal-mask" @click.self="cancelDelete">
+          <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="deleteTitle"
+          >
+            <h3 id="deleteTitle" class="modal-title">
+              确认删除商品 “{{ deleteTarget.name }}” 吗？
+            </h3>
+            <p class="modal-desc">
+              删除会调用后端接口并从数据库中移除该商品，此操作不能撤销。
+            </p>
+            <div class="modal-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                @click="cancelDelete"
+                :disabled="isSubmitting"
+              >
+                取消
+              </button>
+              <button
+                class="btn btn-danger"
+                type="button"
+                @click="handleDeleteConfirmed"
+                :disabled="isSubmitting"
+              >
+                {{ isSubmitting ? '删除中...' : '确认删除' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp, computed, reactive, ref } = Vue;
+      const API_BASE_URL = "http://localhost:8080";
+
+      createApp({
+        setup() {
+          const savedTheme = localStorage.getItem("product-page-theme");
+          const theme = ref(savedTheme === "dark" ? "dark" : "light");
+          const products = ref([]);
+          const errors = ref([]);
+          const deleteTarget = ref(null);
+          const editingId = ref(null);
+          const isLoading = ref(false);
+          const isSubmitting = ref(false);
+          let toastTimer = null;
+
+          const form = reactive({
+            id: "",
+            name: "",
+            price: "",
+          });
+
+          const filters = reactive({
+            keyword: "",
+            maxPrice: "",
+          });
+
+          const message = reactive({
+            text: "",
+            type: "success",
+          });
+
+          const toast = reactive({
+            text: "",
+            type: "success",
+          });
+
+          const isEditing = computed(() => editingId.value !== null);
+
+          const formDescription = computed(() => {
+            if (!isEditing.value) {
+              return "填写商品 ID、名称和价格后，提交到 Gin 后端新增商品。";
+            }
+
+            return `正在编辑：${form.name}，ID：${form.id}。商品 ID 不允许修改。`;
+          });
+
+          const filteredProducts = computed(() => {
+            const keyword = filters.keyword.toLowerCase();
+            const maxPrice = Number(filters.maxPrice);
+            const hasMaxPrice =
+              filters.maxPrice !== "" && !Number.isNaN(maxPrice);
+
+            return products.value.filter((product) => {
+              const name = String(product.name || "").toLowerCase();
+              const price = Number(product.price);
+              const matchName = name.includes(keyword);
+              const matchPrice = !hasMaxPrice || price <= maxPrice;
+              return matchName && matchPrice;
+            });
+          });
+
+          const highestPrice = computed(() => {
+            if (!products.value.length) {
+              return 0;
+            }
+
+            return Math.max(
+              ...products.value.map((product) => Number(product.price) || 0),
+            );
+          });
+
+          async function requestJson(path, options = {}) {
+            let response;
+
+            try {
+              response = await fetch(`${API_BASE_URL}${path}`, {
+                headers: {
+                  "Content-Type": "application/json",
+                  ...(options.headers || {}),
+                },
+                ...options,
+              });
+            } catch (error) {
+              throw new Error(
+                error.message || "网络错误，请确认 Gin 后端已在 8080 端口运行。",
+              );
+            }
+
+            let result;
+            try {
+              result = await response.json();
+            } catch (error) {
+              throw new Error("接口返回不是有效 JSON。");
+            }
+
+            if (!response.ok || result.code < 200 || result.code >= 300) {
+              throw new Error(result.message || `请求失败，状态码：${response.status}`);
+            }
+
+            return result;
+          }
+
+          async function loadProducts(options = {}) {
+            isLoading.value = true;
+
+            try {
+              const result = await requestJson("/products");
+              products.value = Array.isArray(result.data) ? result.data : [];
+              if (!options.silent) {
+                showMessage("商品列表已刷新。", "success");
+              }
+            } catch (error) {
+              products.value = [];
+              showMessage(error.message || "加载商品失败。", "error");
+            } finally {
+              isLoading.value = false;
+            }
+          }
+
+          async function createProduct(payload) {
+            return requestJson("/products", {
+              method: "POST",
+              body: JSON.stringify(payload),
+            });
+          }
+
+          async function updateProduct(id, payload) {
+            return requestJson(`/products/${encodeURIComponent(id)}`, {
+              method: "PUT",
+              body: JSON.stringify(payload),
+            });
+          }
+
+          async function deleteProduct(id) {
+            return requestJson(`/products/${encodeURIComponent(id)}`, {
+              method: "DELETE",
+            });
+          }
+
+          function validateForm() {
+            const nextErrors = [];
+            const id = Number(form.id);
+            const price = Number(form.price);
+
+            if (!form.id) {
+              nextErrors.push("商品 ID 不能为空。");
+            } else if (!Number.isInteger(id) || id <= 0) {
+              nextErrors.push("商品 ID 必须是大于 0 的整数。");
+            }
+
+            if (!form.name) {
+              nextErrors.push("商品名称不能为空。");
+            }
+
+            if (form.price === "") {
+              nextErrors.push("商品价格不能为空。");
+            } else if (Number.isNaN(price)) {
+              nextErrors.push("请输入有效的商品价格。");
+            } else if (price <= 0) {
+              nextErrors.push("商品价格必须大于 0。");
+            }
+
+            errors.value = nextErrors;
+            return nextErrors;
+          }
+
+          async function handleSubmit() {
+            const nextErrors = validateForm();
+
+            if (nextErrors.length) {
+              showMessage(nextErrors[0], "error");
+              return;
+            }
+
+            const id = Number(form.id);
+            const payload = {
+              id,
+              name: form.name,
+              price: Number(form.price),
+            };
+
+            isSubmitting.value = true;
+
+            try {
+              if (isEditing.value) {
+                await updateProduct(editingId.value, {
+                  name: payload.name,
+                  price: payload.price,
+                });
+                showMessage(`商品 “${payload.name}” 已更新。`, "success");
+              } else {
+                await createProduct(payload);
+                showMessage(`商品 “${payload.name}” 已新增。`, "success");
+              }
+
+              resetForm();
+              await loadProducts({ silent: true });
+            } catch (error) {
+              showMessage(error.message || "保存商品失败。", "error");
+            } finally {
+              isSubmitting.value = false;
+            }
+          }
+
+          function startEdit(product) {
+            editingId.value = product.id;
+            form.id = String(product.id);
+            form.name = product.name;
+            form.price = String(product.price);
+            errors.value = [];
+            showMessage(`正在编辑商品 “${product.name}”。`, "success");
+          }
+
+          function cancelEdit() {
+            resetForm();
+            showMessage("已取消编辑。", "warning");
+          }
+
+          function confirmDelete(product) {
+            deleteTarget.value = product;
+          }
+
+          function cancelDelete() {
+            deleteTarget.value = null;
+            showMessage("已取消删除。", "warning");
+          }
+
+          async function handleDeleteConfirmed() {
+            if (!deleteTarget.value) {
+              return;
+            }
+
+            const product = deleteTarget.value;
+            isSubmitting.value = true;
+
+            try {
+              await deleteProduct(product.id);
+
+              if (String(form.id) === String(product.id)) {
+                resetForm();
+              }
+
+              deleteTarget.value = null;
+              showMessage(`商品 “${product.name}” 已删除。`, "success");
+              await loadProducts({ silent: true });
+            } catch (error) {
+              showMessage(error.message || "删除商品失败。", "error");
+            } finally {
+              isSubmitting.value = false;
+            }
+          }
+
+          function resetForm() {
+            editingId.value = null;
+            form.id = "";
+            form.name = "";
+            form.price = "";
+            errors.value = [];
+          }
+
+          function resetFilters() {
+            filters.keyword = "";
+            filters.maxPrice = "";
+            showMessage("筛选条件已重置。", "success");
+          }
+
+          function showMessage(text, type) {
+            message.text = text;
+            message.type = type;
+            showToast(text, type);
+          }
+
+          function showToast(text, type) {
+            toast.text = text;
+            toast.type = type;
+
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+              toast.text = "";
+            }, 2200);
+          }
+
+          function toggleTheme() {
+            theme.value = theme.value === "dark" ? "light" : "dark";
+            localStorage.setItem("product-page-theme", theme.value);
+          }
+
+          function formatPrice(price) {
+            return Number(price || 0).toFixed(2);
+          }
+
+          loadProducts();
+
+          return {
+            theme,
+            products,
+            form,
+            filters,
+            errors,
+            message,
+            toast,
+            deleteTarget,
+            editingId,
+            isLoading,
+            isSubmitting,
+            isEditing,
+            formDescription,
+            filteredProducts,
+            highestPrice,
+            handleSubmit,
+            startEdit,
+            cancelEdit,
+            confirmDelete,
+            cancelDelete,
+            handleDeleteConfirmed,
+            resetFilters,
+            toggleTheme,
+            formatPrice,
+            loadProducts,
+            createProduct,
+            updateProduct,
+            deleteProduct,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
