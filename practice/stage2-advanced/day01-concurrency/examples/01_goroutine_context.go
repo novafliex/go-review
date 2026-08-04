@@ -1,4 +1,4 @@
-package main
+package examples
 
 import (
 	"context"
@@ -47,7 +47,7 @@ func limitedWorkerPool(tasks []string, max int) {
 	wg.Wait()
 }
 
-func runLesson1() {
+func RunGoroutineContext() {
 	urls := []string{"google.com", "baidu.com", "yahoo.com", "bing.com", "douyin.com"}
 
 	start := time.Now()

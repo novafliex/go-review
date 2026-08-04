@@ -1,4 +1,4 @@
-package main
+package examples
 
 import (
 	"fmt"
@@ -7,17 +7,17 @@ import (
 	"time"
 )
 
-type Order struct {
+type PipelineOrder struct {
 	ID     int
 	UserID string
 	Amount float64
 	Status string
 }
 
-func produceOrders(out chan<- Order, number int) {
+func producePipelineOrders(out chan<- PipelineOrder, number int) {
 	defer close(out)
 	for i := 1; i <= number; i++ {
-		order := Order{
+		order := PipelineOrder{
 			ID: i, UserID: fmt.Sprintf("user-%d", rand.Intn(100)),
 			Amount: rand.Float64() * 1000, Status: "pending",
 		}
@@ -26,7 +26,7 @@ func produceOrders(out chan<- Order, number int) {
 	}
 }
 
-func processOrders(id int, in <-chan Order, out chan<- Order, wg *sync.WaitGroup) {
+func processPipelineOrders(id int, in <-chan PipelineOrder, out chan<- PipelineOrder, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for order := range in {
 		time.Sleep(100 * time.Millisecond)
@@ -36,7 +36,7 @@ func processOrders(id int, in <-chan Order, out chan<- Order, wg *sync.WaitGroup
 	}
 }
 
-func selectTimeoutDemo() {
+func runSelectTimeoutDemo() {
 	ch := make(chan string)
 	go func() {
 		time.Sleep(200 * time.Millisecond)
@@ -51,15 +51,15 @@ func selectTimeoutDemo() {
 	}
 }
 
-func runLesson2() {
-	orders := make(chan Order, 5)
-	results := make(chan Order, 5)
+func RunChannelPipeline() {
+	orders := make(chan PipelineOrder, 5)
+	results := make(chan PipelineOrder, 5)
 	var workers sync.WaitGroup
 
-	go produceOrders(orders, 10)
+	go producePipelineOrders(orders, 10)
 	for i := 1; i <= 3; i++ {
 		workers.Add(1)
-		go processOrders(i, orders, results, &workers)
+		go processPipelineOrders(i, orders, results, &workers)
 	}
 
 	// 只有协调者关闭 results，worker 不能各自关闭它。
@@ -72,5 +72,5 @@ func runLesson2() {
 		fmt.Printf("订单 %d 状态: %s，金额: %.2f\n", order.ID, order.Status, order.Amount)
 	}
 
-	selectTimeoutDemo()
+	runSelectTimeoutDemo()
 }

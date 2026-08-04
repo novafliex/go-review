@@ -19,7 +19,8 @@ go-review/
 ├── docs/
 │   ├── PLAN_25_DAYS.md
 │   ├── LEARNING_STRUCTURE.md
-│   └── DAILY_LOG_TEMPLATE.md
+│   ├── DAILY_LOG_TEMPLATE.md
+│   └── DAY_REVIEW_TEMPLATE.md
 ├── notes/                   # 每日复盘
 ├── go.mod
 └── go.sum
@@ -76,4 +77,3 @@ go run .
 5. Day 25 在 `projects/coursehub-rebuild/` 闭卷重建。
 
 更多整理原则见 [学习目录说明](./docs/LEARNING_STRUCTURE.md)。
-

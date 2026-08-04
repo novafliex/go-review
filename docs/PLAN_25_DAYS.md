@@ -85,9 +85,10 @@ projects/coursehub/
 **亲手敲**
 
 - 原有 `day01-basic-syntax`～`day15-go-jwt-auth-middleware` 已归档到 `practice/stage1-basics/`；新建并进入 `practice/stage2-advanced/day01-concurrency/`，继续使用仓库根 `go.mod`。
-- `day01-concurrency/pool.go`：实现有界 worker pool，包含 `jobs`、`results`、`context.Context` 取消和正常关闭。
-- `day01-concurrency/counter.go`：分别用 `sync.Mutex`、`atomic` 实现安全计数器，并故意保留一个仅供测试演示的非安全版本。
-- `day01-concurrency/pool_test.go`：验证任务不丢失、取消后退出、重复关闭不 panic；用 `-race` 看见并修复数据竞争。
+- `day01-concurrency/exercises/01_order_pipeline.go`：先独立完成生产者、3 个 worker、结果汇总和正确关闭顺序。
+- `day01-concurrency/exercises/02_safe_counter.go`：分别用 `sync.Mutex`、`atomic` 实现安全计数器，并故意保留一个仅供测试演示的非安全版本。
+- `day01-concurrency/exercises/03_worker_pool.go`：实现有界 worker pool，包含 `jobs`、`results`、`context.Context` 取消和正常关闭。
+- 为后两个练习编写测试：验证计数正确、任务不丢失、取消后退出、重复关闭不 panic；用 `-race` 看见并修复数据竞争。
 
 **验收**
 
