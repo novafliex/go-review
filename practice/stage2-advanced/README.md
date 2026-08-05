@@ -5,8 +5,8 @@
 ```text
 stage2-advanced/
 ├── day01-concurrency/
-├── day02-tcp/
-├── day03-web/
+├── day02-concurrency-patterns/
+├── day03-network-web/
 └── day04-rest/
 ```
 

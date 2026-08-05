@@ -8,11 +8,11 @@ import (
 
 func TestUnsafeCounter(t *testing.T) {
 	if os.Getenv("RUN_UNSAFE_RACE") != "1" {
-		t.Skip("设置 RUN_UNSAFE_RACE=1 后用 -race 观察故意保留的数据竞争")
+		t.Skip("设置 RUN_UNSAFE_RACE=1 后，用 -race 单独观察数据竞争")
 	}
 
 	counter := &UnsafeCounter{}
-	runConcurrentIncrements(counter)
+	runIncrements(counter)
 	t.Log("理论计数: 100000，实际计数:", counter.Value())
 }
 
@@ -26,15 +26,13 @@ func TestAtomicCounter(t *testing.T) {
 
 func testSafeCounter(t *testing.T, counter Counter) {
 	t.Helper()
-	runConcurrentIncrements(counter)
-
-	const want int64 = 100000
-	if got := counter.Value(); got != want {
-		t.Fatalf("计数结果 = %d，期望 %d", got, want)
+	runIncrements(counter)
+	if got := counter.Value(); got != 100000 {
+		t.Fatalf("计数 = %d，期望 100000", got)
 	}
 }
 
-func runConcurrentIncrements(counter Counter) {
+func runIncrements(counter Counter) {
 	var wg sync.WaitGroup
 
 	for i := 0; i < 100; i++ {

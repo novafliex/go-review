@@ -85,7 +85,7 @@ projects/coursehub/
 **亲手敲**
 
 - 原有 `day01-basic-syntax`～`day15-go-jwt-auth-middleware` 已归档到 `practice/stage1-basics/`；新建并进入 `practice/stage2-advanced/day01-concurrency/`，继续使用仓库根 `go.mod`。
-- `day01-concurrency/exercises/01_order_pipeline.go`：先独立完成生产者、3 个 worker、结果汇总和正确关闭顺序。
+- `day01-concurrency/exercises/01_order_pipeline_test.go`：先独立完成生产者、3 个 worker、结果汇总和正确关闭顺序。
 - `day01-concurrency/exercises/02_safe_counter.go`：分别用 `sync.Mutex`、`atomic` 实现安全计数器，并故意保留一个仅供测试演示的非安全版本。
 - `day01-concurrency/exercises/03_worker_pool.go`：实现有界 worker pool，包含 `jobs`、`results`、`context.Context` 取消和正常关闭。
 - 为后两个练习编写测试：验证计数正确、任务不丢失、取消后退出、重复关闭不 panic；用 `-race` 看见并修复数据竞争。
@@ -96,44 +96,47 @@ projects/coursehub/
 - 在仓库根目录执行 `go test -race ./practice/stage2-advanced/day01-concurrency/...` 通过。
 - Git：`day01: implement cancellable worker pool`。
 
-### Day 2：并发模式与 TCP/IP
+### Day 2：并发模式
 
-**听课（约 48 分钟）**
+**听课（以视频实际时长为准）**
 
 - 第二阶段 4《并发模式》
-- 第二阶段 5《TCP-IP 网络基础》
 
 **亲手敲**
 
-- `practice/stage2-advanced/day02-tcp/server.go`：实现行协议 TCP 服务，支持 `PING`、`ECHO text`、未知命令错误。
-- 每连接一个 goroutine；加入读写 deadline、最大行长度、优雅停止，并复用 Day 1 的 worker pool 处理消息。
-- `day02-tcp/server_test.go`：使用 `net.Pipe` 或随机本地端口测试半包/多包、超时、客户端断开和服务停止。
+- `practice/stage2-advanced/day02-concurrency-patterns/examples/`：按课程完成生产者-消费者、扇出/扇入和 Pipeline 示例。
+- `exercises/patterns.go`：用简单整数任务重新实现扇出、扇入和三阶段 Pipeline，不复制订单示例。
+- `patterns_test.go`：验证扇出任务不丢失、扇入结果完整、Pipeline 过滤与转换正确。
 
 **验收**
 
-- 能画出客户端连接到响应的完整时序，并说明 TCP 为什么没有“消息边界”。
-- 在仓库根目录执行 `go test -race ./practice/stage2-advanced/day02-tcp/...` 通过。
-- Git：`day02: build concurrent tcp line server`。
+- 能说明生产者-消费者、扇出、扇入和 Pipeline 的数据流以及 channel 关闭责任。
+- 在仓库根目录执行 `go test -race ./practice/stage2-advanced/day02-concurrency-patterns/...` 通过。
+- Git：`day02: practice fan-out fan-in and pipelines`。
 
-### Day 3：HTTP、WebSocket 与 Web 产品流程
+### Day 3：TCP/IP、HTTP、WebSocket 与 Web 产品流程
 
-**听课（约 50 分钟）**
+**听课（以视频实际时长为准）**
 
+- 第二阶段 5《TCP-IP 网络基础》
 - 第二阶段 6《http 编程》
 - 第二阶段 7《websocket 初探》
 - 第二阶段 8《Web 服务产品开发流程》
 
 **亲手敲**
 
-- `practice/stage2-advanced/day03-web/server.go`：只用 `net/http` 写 `/healthz`、`GET /courses`、`POST /courses`。
-- `day03-web/hub.go`：WebSocket 连接中心；创建课程后向所有客户端广播事件；断连必须注销，避免 goroutine 泄漏。
-- 先写 1 页 `day03-web/mini-product-flow.md`：用户故事、接口、数据、失败场景、验收标准，再编码。
+- `practice/stage2-advanced/day03-network-web/tcp_server.go`：实现行协议 TCP 服务，支持 `PING`、`ECHO text`、未知命令错误、deadline、最大行长和优雅停止。
+- `tcp_server_test.go`：使用 `net.Pipe` 或随机本地端口测试半包/多包、超时、客户端断开和服务停止。
+- `http_server.go`：只用 `net/http` 写 `/healthz`、`GET /courses`、`POST /courses`。
+- `hub.go`：WebSocket 连接中心；创建课程后向所有客户端广播事件；断连必须注销，避免 goroutine 泄漏。
+- 先写 1 页 `mini-product-flow.md`：用户故事、接口、数据、失败场景、验收标准，再编码。
 - 用 `httptest` 测状态码、JSON、非法请求体、方法错误；为 hub 写连接/断开测试。
 
 **验收**
 
+- 能画出 TCP 客户端连接到响应的时序，说明 TCP 为什么没有消息边界。
 - 能解释 HTTP 与 WebSocket 的边界，以及 handler 为什么不应直接承载全部业务逻辑。
-- Git：`day03: add http api and websocket events`。
+- Git：`day03: build tcp and web services`。
 
 ### Day 4：路由、中间件、RESTful
 

@@ -2,7 +2,7 @@ package examples
 
 import (
 	"fmt"
-	"math/rand"
+	"math/rand/v2"
 	"sync"
 	"time"
 )
@@ -18,7 +18,7 @@ func producePipelineOrders(out chan<- PipelineOrder, number int) {
 	defer close(out)
 	for i := 1; i <= number; i++ {
 		order := PipelineOrder{
-			ID: i, UserID: fmt.Sprintf("user-%d", rand.Intn(100)),
+			ID: i, UserID: fmt.Sprintf("user-%d", rand.IntN(100)),
 			Amount: rand.Float64() * 1000, Status: "pending",
 		}
 		out <- order

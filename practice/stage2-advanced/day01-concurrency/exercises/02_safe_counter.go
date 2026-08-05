@@ -23,7 +23,6 @@ func (c *UnsafeCounter) Value() int64 {
 	return c.value
 }
 
-// MutexCounter 用互斥锁保护读写，适合需要组合多个操作的共享状态。
 type MutexCounter struct {
 	mu    sync.Mutex
 	value int64
@@ -41,7 +40,6 @@ func (c *MutexCounter) Value() int64 {
 	return c.value
 }
 
-// AtomicCounter 用原子操作保护单个整数的简单读写。
 type AtomicCounter struct {
 	value atomic.Int64
 }

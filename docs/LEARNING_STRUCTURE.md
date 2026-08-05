@@ -15,8 +15,8 @@ go-review/
 │   │   └── day15-go-jwt-auth-middleware/
 │   └── stage2-advanced/
 │       ├── day01-concurrency/
-│       ├── day02-tcp/
-│       ├── day03-web/
+│       ├── day02-concurrency-patterns/
+│       ├── day03-network-web/
 │       └── day04-rest/
 ├── projects/
 │   ├── coursehub/
@@ -47,4 +47,3 @@ go-review/
 - 会持续多天、有数据库和业务流程：放 `projects/`。
 - 学习计划、架构说明、API 文档：放 `docs/` 或对应项目自己的 `docs/`。
 - 当天心得和报错：放 `notes/`。
-

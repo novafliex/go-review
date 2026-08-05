@@ -46,7 +46,7 @@ go test -race -count=1 -run TestOrderPipeline -v ./exercises
 go test -race -count=1 -run "TestMutexCounter|TestAtomicCounter" -v ./exercises
 ```
 
-Mutex 和 atomic 版本都必须稳定得到 100000。单独观察不安全版本：
+Mutex 和 atomic 版本都应稳定得到 100000。不安全版本只用于单独观察 race：
 
 ```powershell
 $env:RUN_UNSAFE_RACE="1"
@@ -60,4 +60,4 @@ Remove-Item Env:RUN_UNSAFE_RACE
 go test -race -count=1 -run TestWorkerPool -v ./exercises
 ```
 
-覆盖任务不丢失、Context 取消、并发上限和非法 worker 数量。
+固定数量 worker 处理任务，支持正常关闭和 Context 取消。

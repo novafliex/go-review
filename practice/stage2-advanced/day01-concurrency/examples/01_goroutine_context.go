@@ -3,14 +3,14 @@ package examples
 import (
 	"context"
 	"fmt"
-	"math/rand"
+	"math/rand/v2"
 	"runtime"
 	"sync"
 	"time"
 )
 
 func fetchData(url string) {
-	delay := time.Duration(rand.Intn(500)) * time.Millisecond
+	delay := time.Duration(rand.IntN(500)) * time.Millisecond
 	time.Sleep(delay)
 	fmt.Printf("完成 %-24s 耗时 %v\n", url, delay)
 }
