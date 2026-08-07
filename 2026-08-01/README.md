@@ -1,7 +1,7 @@
 # Day 01：Go 并发
 
 ```text
-day01-concurrency/
+2026-08-01/
 ├── examples/          # 3 个课程示例
 ├── exercises/         # 3 个练习
 └── README.md          # 总结和练习要求

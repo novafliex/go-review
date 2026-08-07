@@ -1,79 +1,66 @@
-# go-review
+# Go 日常复习
 
-这是一个按学习阶段整理的 Go 练习与项目仓库。基础练习、进阶练习和正式项目彼此分开，但统一使用根目录的 Go module：
+这是一个按实际练习日期整理的 Go 代码仓库，不再区分阶段，也不再使用 25 天计划。
+
+## 目录规则
+
+- 根目录下每个 `YYYY-MM-DD` 文件夹代表一天。
+- 一天的示例、练习、测试和笔记放在同一个日期目录中。
+- 内容较多时，只在当天目录内使用少量分类文件夹。
+- 所有日期共用仓库根目录的 `go.mod`，不要在日期目录里重复执行 `go mod init`。
+
+日期目录内容较多时，保持下面这种简单结构：
 
 ```text
-github.com/MikeJosion/go-review
+YYYY-MM-DD/
+├── examples/     # 听课、复习时查看的完整示例
+├── exercises/    # 听完后自己重写的练习和测试
+└── README.md     # 当天总结、运行命令和复习问题
 ```
 
-## 目录结构
+不是每天都必须创建这三个部分。代码较少时直接放在日期目录中，避免拆得太零散。
 
-```text
-go-review/
-├── practice/
-│   ├── stage1-basics/       # 已完成的基础与 Web 练习
-│   └── stage2-advanced/     # 25 天计划 Day 1～4
-├── projects/
-│   ├── coursehub/           # 25 天计划 Day 5～24
-│   └── coursehub-rebuild/   # Day 25 闭卷重建
-├── docs/
-│   ├── PLAN_25_DAYS.md
-│   ├── LEARNING_STRUCTURE.md
-│   ├── DAILY_LOG_TEMPLATE.md
-│   └── DAY_REVIEW_TEMPLATE.md
-├── notes/                   # 每日复盘
-├── go.mod
-└── go.sum
-```
+## 当前内容
 
-## 第一阶段已有练习
-
-| 目录 | 练习内容 |
+| 日期 | 主题 |
 |---|---|
-| `day01-basic-syntax` | 变量、常量和数据类型 |
-| `day02-functions` | 函数练习 |
-| `day03-study-task` | 综合语法任务 |
-| `day04-go-server` | `net/http` 与静态页面 |
-| `day05-go-movie-crud` | 内存版电影 CRUD |
-| `day06-go-music-crud` | 音乐 CRUD |
-| `day07-go-product-crud` | 商品 CRUD 与中间件 |
-| `day08-go-product-gin-crud` | Gin 商品 CRUD |
-| `day09-go-product-mysql` | Gin + MySQL 商品服务 |
-| `day10-go-product-user` | 商品、用户与前端联调 |
-| `day11-go-category-crud` | 分类 CRUD |
-| `day12-go-student-crud` | 学生 CRUD |
-| `day13-go-bcrypt-basic` | bcrypt 密码摘要 |
-| `day14-go-auth-bcrypt-nojwt` | 无 JWT 的登录鉴权 |
-| `day15-go-jwt-auth-middleware` | JWT 鉴权中间件与测试 |
+| `2026-07-12` | Go 基础语法 |
+| `2026-07-13` | 函数 |
+| `2026-07-14` | 综合语法练习 |
+| `2026-07-15` | Go HTTP 服务 |
+| `2026-07-16` | 电影 CRUD |
+| `2026-07-17` | 音乐 CRUD |
+| `2026-07-18` | 商品 CRUD |
+| `2026-07-19` | Gin 商品 CRUD |
+| `2026-07-20` | 商品与 MySQL |
+| `2026-07-21` | 商品与用户 |
+| `2026-07-22` | 分类 CRUD |
+| `2026-07-23` | 学生 CRUD |
+| `2026-07-24` | bcrypt 基础 |
+| `2026-07-25` | bcrypt 登录鉴权 |
+| `2026-07-26` | JWT 鉴权中间件 |
+| `2026-08-01` | goroutine、channel、锁与原子操作 |
+| `2026-08-02` | 并发模式 |
+| `2026-08-03` | TCP 编程 |
+| `2026-08-04` | HTTP、WebSocket、路由与 RESTful |
 
-以上目录都位于 `practice/stage1-basics/`。
+## 怎么运行
 
-## 运行练习
-
-在仓库根目录运行普通练习：
-
-```powershell
-go run ./practice/stage1-basics/day01-basic-syntax
-go run ./practice/stage1-basics/day02-functions
-go run ./practice/stage1-basics/day03-study-task
-go run ./practice/stage1-basics/day15-go-jwt-auth-middleware
-```
-
-Day 04 使用相对静态资源路径，需要从自己的目录启动：
+运行某一天的普通示例：
 
 ```powershell
-Set-Location .\practice\stage1-basics\day04-go-server
-go run .
+go run ./2026-07-12
 ```
 
-数据库练习启动前需要准备本机 MySQL 和各练习需要的环境变量。真实密码只放在 `.env`，不要提交。
+运行全部测试：
 
-## 接下来怎么学
+```powershell
+go test ./...
+go test -race ./...
+```
 
-1. 打开 [25 天执行计划](./docs/PLAN_25_DAYS.md)。
-2. 每天复制 [学习记录模板](./docs/DAILY_LOG_TEMPLATE.md) 为 `notes/dayNN.md`。
-3. Day 1～4 在 `practice/stage2-advanced/` 写独立练习。
-4. Day 5～24 始终在 `projects/coursehub/` 迭代同一个正式项目。
-5. Day 25 在 `projects/coursehub-rebuild/` 闭卷重建。
+开始新的一天时，只需在根目录新建下一个日期文件夹，例如：
 
-更多整理原则见 [学习目录说明](./docs/LEARNING_STRUCTURE.md)。
+```powershell
+New-Item -ItemType Directory 2026-08-05
+```

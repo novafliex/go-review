@@ -1,7 +1,7 @@
 # Day 02：并发模式
 
 ```text
-day02-concurrency-patterns/
+2026-08-02/
 ├── examples/    # 并发模式课程代码，3 个文件
 ├── exercises/   # 扇出、扇入、Pipeline 练习
 └── README.md
