@@ -1,0 +1,6 @@
+# import config
+packagefile internal/race=E:\Code\Go\go-review\.gotmp\go-build3954299874\b027\_pkg_.a
+packagefile internal/sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b043\_pkg_.a
+packagefile internal/synctest=E:\Code\Go\go-review\.gotmp\go-build3954299874\b045\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a

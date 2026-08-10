@@ -1,0 +1,9 @@
+# import config
+packagefile cmp=E:\Code\Go\go-review\.gotmp\go-build3954299874\b036\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile internal/bytealg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b010\_pkg_.a
+packagefile internal/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b012\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile unique=E:\Code\Go\go-review\.gotmp\go-build3954299874\b175\_pkg_.a

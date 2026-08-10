@@ -1,0 +1,11 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile debug/macho=E:\Code\Go\go-review\.gotmp\go-build3954299874\b220\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/charset=E:\Code\Go\go-review\.gotmp\go-build3954299874\b216\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/csv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b224\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/json=E:\Code\Go\go-review\.gotmp\go-build3954299874\b225\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/markup=E:\Code\Go\go-review\.gotmp\go-build3954299874\b217\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/scan=E:\Code\Go\go-review\.gotmp\go-build3954299874\b218\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

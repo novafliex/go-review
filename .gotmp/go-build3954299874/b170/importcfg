@@ -1,0 +1,24 @@
+# import config
+importmap golang.org/x/net/dns/dnsmessage=vendor/golang.org/x/net/dns/dnsmessage
+packagefile cmp=E:\Code\Go\go-review\.gotmp\go-build3954299874\b036\_pkg_.a
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile vendor/golang.org/x/net/dns/dnsmessage=E:\Code\Go\go-review\.gotmp\go-build3954299874\b171\_pkg_.a
+packagefile internal/bytealg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b010\_pkg_.a
+packagefile internal/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b060\_pkg_.a
+packagefile internal/nettrace=E:\Code\Go\go-review\.gotmp\go-build3954299874\b172\_pkg_.a
+packagefile internal/poll=E:\Code\Go\go-review\.gotmp\go-build3954299874\b063\_pkg_.a
+packagefile internal/singleflight=E:\Code\Go\go-review\.gotmp\go-build3954299874\b173\_pkg_.a
+packagefile internal/strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b031\_pkg_.a
+packagefile internal/stringslite=E:\Code\Go\go-review\.gotmp\go-build3954299874\b033\_pkg_.a
+packagefile internal/syscall/windows=E:\Code\Go\go-review\.gotmp\go-build3954299874\b051\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile io/fs=E:\Code\Go\go-review\.gotmp\go-build3954299874\b057\_pkg_.a
+packagefile net/netip=E:\Code\Go\go-review\.gotmp\go-build3954299874\b174\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile syscall=E:\Code\Go\go-review\.gotmp\go-build3954299874\b055\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

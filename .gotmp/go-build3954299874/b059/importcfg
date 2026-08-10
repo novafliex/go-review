@@ -1,0 +1,10 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile internal/bytealg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b010\_pkg_.a
+packagefile internal/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b060\_pkg_.a
+packagefile internal/stringslite=E:\Code\Go\go-review\.gotmp\go-build3954299874\b033\_pkg_.a
+packagefile internal/syscall/windows/registry=E:\Code\Go\go-review\.gotmp\go-build3954299874\b062\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile syscall=E:\Code\Go\go-review\.gotmp\go-build3954299874\b055\_pkg_.a

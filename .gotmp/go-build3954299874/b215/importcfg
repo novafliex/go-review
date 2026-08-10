@@ -1,0 +1,10 @@
+# import config
+packagefile github.com/gabriel-vasile/mimetype/internal/charset=E:\Code\Go\go-review\.gotmp\go-build3954299874\b216\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/magic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b219\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile mime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b186\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a

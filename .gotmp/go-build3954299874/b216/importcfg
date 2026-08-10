@@ -1,0 +1,6 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/markup=E:\Code\Go\go-review\.gotmp\go-build3954299874\b217\_pkg_.a
+packagefile github.com/gabriel-vasile/mimetype/internal/scan=E:\Code\Go\go-review\.gotmp\go-build3954299874\b218\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

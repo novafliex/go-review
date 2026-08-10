@@ -1,0 +1,27 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile crypto/sha256=E:\Code\Go\go-review\.gotmp\go-build3954299874\b149\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile encoding/json=E:\Code\Go\go-review\.gotmp\go-build3954299874\b196\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile go/ast=E:\Code\Go\go-review\.gotmp\go-build3954299874\b352\_pkg_.a
+packagefile go/parser=E:\Code\Go\go-review\.gotmp\go-build3954299874\b355\_pkg_.a
+packagefile go/token=E:\Code\Go\go-review\.gotmp\go-build3954299874\b256\_pkg_.a
+packagefile internal/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b060\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile os/exec=E:\Code\Go\go-review\.gotmp\go-build3954299874\b332\_pkg_.a
+packagefile path/filepath=E:\Code\Go\go-review\.gotmp\go-build3954299874\b189\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile syscall=E:\Code\Go\go-review\.gotmp\go-build3954299874\b055\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

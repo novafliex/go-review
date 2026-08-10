@@ -1,0 +1,15 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/congestion=E:\Code\Go\go-review\.gotmp\go-build3954299874\b289\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/monotime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b290\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/protocol=E:\Code\Go\go-review\.gotmp\go-build3954299874\b291\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/qerr=E:\Code\Go\go-review\.gotmp\go-build3954299874\b295\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/utils=E:\Code\Go\go-review\.gotmp\go-build3954299874\b293\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/wire=E:\Code\Go\go-review\.gotmp\go-build3954299874\b296\_pkg_.a
+packagefile github.com/quic-go/quic-go/qlog=E:\Code\Go\go-review\.gotmp\go-build3954299874\b294\_pkg_.a
+packagefile github.com/quic-go/quic-go/qlogwriter=E:\Code\Go\go-review\.gotmp\go-build3954299874\b297\_pkg_.a
+packagefile iter=E:\Code\Go\go-review\.gotmp\go-build3954299874\b038\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

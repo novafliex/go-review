@@ -1,0 +1,13 @@
+# import config
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile golang.org/x/net/http/httpguts=E:\Code\Go\go-review\.gotmp\go-build3954299874\b310\_pkg_.a
+packagefile golang.org/x/net/http2/hpack=E:\Code\Go\go-review\.gotmp\go-build3954299874\b286\_pkg_.a
+packagefile net/http/httptrace=E:\Code\Go\go-review\.gotmp\go-build3954299874\b190\_pkg_.a
+packagefile net/textproto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b183\_pkg_.a
+packagefile net/url=E:\Code\Go\go-review\.gotmp\go-build3954299874\b176\_pkg_.a
+packagefile sort=E:\Code\Go\go-review\.gotmp\go-build3954299874\b079\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a

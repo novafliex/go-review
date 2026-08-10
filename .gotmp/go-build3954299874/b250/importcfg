@@ -1,0 +1,5 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/pelletier/go-toml/v2/unstable=E:\Code\Go\go-review\.gotmp\go-build3954299874\b251\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a

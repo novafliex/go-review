@@ -1,0 +1,5 @@
+# import config
+packagefile crypto/tls=E:\Code\Go\go-review\.gotmp\go-build3954299874\b118\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/quic-go/quic-go/internal/protocol=E:\Code\Go\go-review\.gotmp\go-build3954299874\b291\_pkg_.a
+packagefile net=E:\Code\Go\go-review\.gotmp\go-build3954299874\b170\_pkg_.a

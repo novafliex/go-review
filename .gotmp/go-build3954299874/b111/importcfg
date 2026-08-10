@@ -1,0 +1,4 @@
+# import config
+packagefile crypto/internal/constanttime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b102\_pkg_.a
+packagefile crypto/internal/fips140/subtle=E:\Code\Go\go-review\.gotmp\go-build3954299874\b101\_pkg_.a
+packagefile internal/runtime/sys=E:\Code\Go\go-review\.gotmp\go-build3954299874\b023\_pkg_.a

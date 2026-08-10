@@ -1,0 +1,15 @@
+# import config
+packagefile crypto/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b086\_pkg_.a
+packagefile crypto/tls=E:\Code\Go\go-review\.gotmp\go-build3954299874\b118\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile encoding/hex=E:\Code\Go\go-review\.gotmp\go-build3954299874\b166\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/quic-go/quic-go/quicvarint=E:\Code\Go\go-review\.gotmp\go-build3954299874\b292\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/rand/v2=E:\Code\Go\go-review\.gotmp\go-build3954299874\b115\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

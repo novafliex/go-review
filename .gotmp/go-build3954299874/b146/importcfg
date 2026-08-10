@@ -1,0 +1,22 @@
+# import config
+importmap golang.org/x/crypto/chacha20poly1305=vendor/golang.org/x/crypto/chacha20poly1305
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/cipher=E:\Code\Go\go-review\.gotmp\go-build3954299874\b089\_pkg_.a
+packagefile crypto/ecdh=E:\Code\Go\go-review\.gotmp\go-build3954299874\b121\_pkg_.a
+packagefile crypto/fips140=E:\Code\Go\go-review\.gotmp\go-build3954299874\b110\_pkg_.a
+packagefile crypto/hkdf=E:\Code\Go\go-review\.gotmp\go-build3954299874\b143\_pkg_.a
+packagefile crypto/internal/fips140/aes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b090\_pkg_.a
+packagefile crypto/internal/fips140/aes/gcm=E:\Code\Go\go-review\.gotmp\go-build3954299874\b104\_pkg_.a
+packagefile crypto/internal/fips140/drbg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b105\_pkg_.a
+packagefile crypto/internal/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b113\_pkg_.a
+packagefile crypto/mlkem=E:\Code\Go\go-review\.gotmp\go-build3954299874\b147\_pkg_.a
+packagefile crypto/sha256=E:\Code\Go\go-review\.gotmp\go-build3954299874\b149\_pkg_.a
+packagefile crypto/sha3=E:\Code\Go\go-review\.gotmp\go-build3954299874\b134\_pkg_.a
+packagefile crypto/sha512=E:\Code\Go\go-review\.gotmp\go-build3954299874\b135\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile vendor/golang.org/x/crypto/chacha20poly1305=E:\Code\Go\go-review\.gotmp\go-build3954299874\b150\_pkg_.a
+packagefile hash=E:\Code\Go\go-review\.gotmp\go-build3954299874\b083\_pkg_.a
+packagefile internal/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b012\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a

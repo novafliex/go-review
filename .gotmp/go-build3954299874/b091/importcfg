@@ -1,0 +1,5 @@
+# import config
+packagefile crypto/internal/fips140deps/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b092\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a

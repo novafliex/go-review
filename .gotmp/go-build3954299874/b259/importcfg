@@ -1,0 +1,18 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile internal/fmtsort=E:\Code\Go\go-review\.gotmp\go-build3954299874\b035\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile io/fs=E:\Code\Go\go-review\.gotmp\go-build3954299874\b057\_pkg_.a
+packagefile maps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b169\_pkg_.a
+packagefile net/url=E:\Code\Go\go-review\.gotmp\go-build3954299874\b176\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile path=E:\Code\Go\go-review\.gotmp\go-build3954299874\b058\_pkg_.a
+packagefile path/filepath=E:\Code\Go\go-review\.gotmp\go-build3954299874\b189\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile text/template/parse=E:\Code\Go\go-review\.gotmp\go-build3954299874\b260\_pkg_.a
+packagefile unicode=E:\Code\Go\go-review\.gotmp\go-build3954299874\b046\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

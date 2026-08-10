@@ -1,0 +1,17 @@
+# import config
+packagefile bufio=E:\Code\Go\go-review\.gotmp\go-build3954299874\b075\_pkg_.a
+packagefile encoding=E:\Code\Go\go-review\.gotmp\go-build3954299874\b197\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile internal/saferio=E:\Code\Go\go-review\.gotmp\go-build3954299874\b138\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile maps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b169\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile unicode=E:\Code\Go\go-review\.gotmp\go-build3954299874\b046\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

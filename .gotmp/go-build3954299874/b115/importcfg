@@ -1,0 +1,6 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile internal/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b012\_pkg_.a
+packagefile internal/chacha8rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b013\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

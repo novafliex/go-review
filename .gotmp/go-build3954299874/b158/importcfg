@@ -1,0 +1,5 @@
+# import config
+packagefile crypto/internal/fips140/alias=E:\Code\Go\go-review\.gotmp\go-build3954299874\b093\_pkg_.a
+packagefile crypto/internal/fips140only=E:\Code\Go\go-review\.gotmp\go-build3954299874\b109\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a

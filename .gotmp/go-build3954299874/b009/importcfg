@@ -1,0 +1,25 @@
+# import config
+packagefile internal/abi=E:\Code\Go\go-review\.gotmp\go-build3954299874\b005\_pkg_.a
+packagefile internal/bytealg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b010\_pkg_.a
+packagefile internal/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b012\_pkg_.a
+packagefile internal/chacha8rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b013\_pkg_.a
+packagefile internal/coverage/rtcov=E:\Code\Go\go-review\.gotmp\go-build3954299874\b014\_pkg_.a
+packagefile internal/cpu=E:\Code\Go\go-review\.gotmp\go-build3954299874\b011\_pkg_.a
+packagefile internal/goarch=E:\Code\Go\go-review\.gotmp\go-build3954299874\b006\_pkg_.a
+packagefile internal/godebugs=E:\Code\Go\go-review\.gotmp\go-build3954299874\b015\_pkg_.a
+packagefile internal/goexperiment=E:\Code\Go\go-review\.gotmp\go-build3954299874\b016\_pkg_.a
+packagefile internal/goos=E:\Code\Go\go-review\.gotmp\go-build3954299874\b017\_pkg_.a
+packagefile internal/profilerecord=E:\Code\Go\go-review\.gotmp\go-build3954299874\b018\_pkg_.a
+packagefile internal/runtime/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b019\_pkg_.a
+packagefile internal/runtime/exithook=E:\Code\Go\go-review\.gotmp\go-build3954299874\b020\_pkg_.a
+packagefile internal/runtime/gc=E:\Code\Go\go-review\.gotmp\go-build3954299874\b021\_pkg_.a
+packagefile internal/runtime/gc/scan=E:\Code\Go\go-review\.gotmp\go-build3954299874\b022\_pkg_.a
+packagefile internal/runtime/maps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b024\_pkg_.a
+packagefile internal/runtime/math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b028\_pkg_.a
+packagefile internal/runtime/pprof/label=E:\Code\Go\go-review\.gotmp\go-build3954299874\b029\_pkg_.a
+packagefile internal/runtime/sys=E:\Code\Go\go-review\.gotmp\go-build3954299874\b023\_pkg_.a
+packagefile internal/runtime/syscall/windows=E:\Code\Go\go-review\.gotmp\go-build3954299874\b030\_pkg_.a
+packagefile internal/strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b031\_pkg_.a
+packagefile internal/stringslite=E:\Code\Go\go-review\.gotmp\go-build3954299874\b033\_pkg_.a
+packagefile internal/trace/tracev2=E:\Code\Go\go-review\.gotmp\go-build3954299874\b034\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

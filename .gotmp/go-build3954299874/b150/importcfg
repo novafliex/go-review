@@ -1,0 +1,13 @@
+# import config
+importmap golang.org/x/crypto/chacha20=vendor/golang.org/x/crypto/chacha20
+importmap golang.org/x/crypto/internal/alias=vendor/golang.org/x/crypto/internal/alias
+importmap golang.org/x/crypto/internal/poly1305=vendor/golang.org/x/crypto/internal/poly1305
+importmap golang.org/x/sys/cpu=vendor/golang.org/x/sys/cpu
+packagefile crypto/cipher=E:\Code\Go\go-review\.gotmp\go-build3954299874\b089\_pkg_.a
+packagefile crypto/fips140=E:\Code\Go\go-review\.gotmp\go-build3954299874\b110\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile vendor/golang.org/x/crypto/chacha20=E:\Code\Go\go-review\.gotmp\go-build3954299874\b151\_pkg_.a
+packagefile vendor/golang.org/x/crypto/internal/alias=E:\Code\Go\go-review\.gotmp\go-build3954299874\b152\_pkg_.a
+packagefile vendor/golang.org/x/crypto/internal/poly1305=E:\Code\Go\go-review\.gotmp\go-build3954299874\b153\_pkg_.a
+packagefile vendor/golang.org/x/sys/cpu=E:\Code\Go\go-review\.gotmp\go-build3954299874\b154\_pkg_.a

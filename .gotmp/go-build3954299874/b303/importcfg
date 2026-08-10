@@ -1,0 +1,9 @@
+# import config
+packagefile crypto/cipher=E:\Code\Go\go-review\.gotmp\go-build3954299874\b089\_pkg_.a
+packagefile crypto/fips140=E:\Code\Go\go-review\.gotmp\go-build3954299874\b110\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile golang.org/x/crypto/chacha20=E:\Code\Go\go-review\.gotmp\go-build3954299874\b301\_pkg_.a
+packagefile golang.org/x/crypto/internal/alias=E:\Code\Go\go-review\.gotmp\go-build3954299874\b302\_pkg_.a
+packagefile golang.org/x/crypto/internal/poly1305=E:\Code\Go\go-review\.gotmp\go-build3954299874\b304\_pkg_.a
+packagefile golang.org/x/sys/cpu=E:\Code\Go\go-review\.gotmp\go-build3954299874\b232\_pkg_.a

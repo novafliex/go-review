@@ -1,0 +1,5 @@
+# import config
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/internal/boring=E:\Code\Go\go-review\.gotmp\go-build3954299874\b087\_pkg_.a
+packagefile crypto/internal/fips140/sha256=E:\Code\Go\go-review\.gotmp\go-build3954299874\b096\_pkg_.a
+packagefile hash=E:\Code\Go\go-review\.gotmp\go-build3954299874\b083\_pkg_.a

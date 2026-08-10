@@ -1,0 +1,21 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/ecdsa=E:\Code\Go\go-review\.gotmp\go-build3954299874\b126\_pkg_.a
+packagefile crypto/ed25519=E:\Code\Go\go-review\.gotmp\go-build3954299874\b140\_pkg_.a
+packagefile crypto/hmac=E:\Code\Go\go-review\.gotmp\go-build3954299874\b145\_pkg_.a
+packagefile crypto/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b086\_pkg_.a
+packagefile crypto/rsa=E:\Code\Go\go-review\.gotmp\go-build3954299874\b159\_pkg_.a
+packagefile crypto/x509=E:\Code\Go\go-review\.gotmp\go-build3954299874\b163\_pkg_.a
+packagefile encoding/base64=E:\Code\Go\go-review\.gotmp\go-build3954299874\b168\_pkg_.a
+packagefile encoding/json=E:\Code\Go\go-review\.gotmp\go-build3954299874\b196\_pkg_.a
+packagefile encoding/pem=E:\Code\Go\go-review\.gotmp\go-build3954299874\b167\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/big=E:\Code\Go\go-review\.gotmp\go-build3954299874\b116\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

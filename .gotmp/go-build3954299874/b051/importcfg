@@ -1,0 +1,9 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile internal/oserror=E:\Code\Go\go-review\.gotmp\go-build3954299874\b052\_pkg_.a
+packagefile internal/runtime/syscall/windows=E:\Code\Go\go-review\.gotmp\go-build3954299874\b030\_pkg_.a
+packagefile internal/syscall/windows/sysdll=E:\Code\Go\go-review\.gotmp\go-build3954299874\b053\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile structs=E:\Code\Go\go-review\.gotmp\go-build3954299874\b054\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile syscall=E:\Code\Go\go-review\.gotmp\go-build3954299874\b055\_pkg_.a

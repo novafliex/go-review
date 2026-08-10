@@ -1,0 +1,7 @@
+# import config
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile github.com/quic-go/quic-go=E:\Code\Go\go-review\.gotmp\go-build3954299874\b287\_pkg_.a
+packagefile github.com/quic-go/quic-go/qlog=E:\Code\Go\go-review\.gotmp\go-build3954299874\b294\_pkg_.a
+packagefile github.com/quic-go/quic-go/qlogwriter=E:\Code\Go\go-review\.gotmp\go-build3954299874\b297\_pkg_.a
+packagefile github.com/quic-go/quic-go/qlogwriter/jsontext=E:\Code\Go\go-review\.gotmp\go-build3954299874\b298\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

@@ -1,0 +1,18 @@
+# import config
+packagefile bufio=E:\Code\Go\go-review\.gotmp\go-build3954299874\b075\_pkg_.a
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile crypto/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b086\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile internal/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b060\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile maps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b169\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile mime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b186\_pkg_.a
+packagefile mime/quotedprintable=E:\Code\Go\go-review\.gotmp\go-build3954299874\b188\_pkg_.a
+packagefile net/textproto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b183\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile path/filepath=E:\Code\Go\go-review\.gotmp\go-build3954299874\b189\_pkg_.a
+packagefile slices=E:\Code\Go\go-review\.gotmp\go-build3954299874\b047\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a

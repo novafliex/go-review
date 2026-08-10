@@ -1,0 +1,6 @@
+# import config
+packagefile crypto/internal/fips140/nistec=E:\Code\Go\go-review\.gotmp\go-build3954299874\b123\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math/big=E:\Code\Go\go-review\.gotmp\go-build3954299874\b116\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a

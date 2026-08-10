@@ -1,0 +1,7 @@
+# import config
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile testing=E:\Code\Go\go-review\.gotmp\go-build3954299874\b347\_pkg_.a
+packagefile testing/internal/testdeps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b350\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile github.com/MikeJosion/go-review/2026-08-02/exercises=E:\Code\Go\go-review\.gotmp\go-build3954299874\b371\_pkg_.a

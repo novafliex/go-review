@@ -1,0 +1,4 @@
+# import config
+packagefile google.golang.org/protobuf/reflect/protoreflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b273\_pkg_.a
+packagefile sort=E:\Code\Go\go-review\.gotmp\go-build3954299874\b079\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a

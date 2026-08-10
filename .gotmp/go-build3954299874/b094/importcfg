@@ -1,0 +1,7 @@
+# import config
+packagefile crypto/internal/fips140=E:\Code\Go\go-review\.gotmp\go-build3954299874\b091\_pkg_.a
+packagefile crypto/internal/fips140/hmac=E:\Code\Go\go-review\.gotmp\go-build3954299874\b095\_pkg_.a
+packagefile crypto/internal/fips140/sha256=E:\Code\Go\go-review\.gotmp\go-build3954299874\b096\_pkg_.a
+packagefile crypto/internal/fips140deps/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b097\_pkg_.a
+packagefile crypto/internal/fips140deps/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b092\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a

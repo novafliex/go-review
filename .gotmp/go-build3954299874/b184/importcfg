@@ -1,0 +1,11 @@
+# import config
+importmap golang.org/x/net/idna=vendor/golang.org/x/net/idna
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile vendor/golang.org/x/net/idna=E:\Code\Go\go-review\.gotmp\go-build3954299874\b178\_pkg_.a
+packagefile net=E:\Code\Go\go-review\.gotmp\go-build3954299874\b170\_pkg_.a
+packagefile net/netip=E:\Code\Go\go-review\.gotmp\go-build3954299874\b174\_pkg_.a
+packagefile net/url=E:\Code\Go\go-review\.gotmp\go-build3954299874\b176\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

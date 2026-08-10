@@ -1,0 +1,25 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile encoding=E:\Code\Go\go-review\.gotmp\go-build3954299874\b197\_pkg_.a
+packagefile encoding/base64=E:\Code\Go\go-review\.gotmp\go-build3954299874\b168\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/goccy/go-yaml/ast=E:\Code\Go\go-review\.gotmp\go-build3954299874\b239\_pkg_.a
+packagefile github.com/goccy/go-yaml/internal/errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b241\_pkg_.a
+packagefile github.com/goccy/go-yaml/internal/format=E:\Code\Go\go-review\.gotmp\go-build3954299874\b243\_pkg_.a
+packagefile github.com/goccy/go-yaml/parser=E:\Code\Go\go-review\.gotmp\go-build3954299874\b244\_pkg_.a
+packagefile github.com/goccy/go-yaml/printer=E:\Code\Go\go-review\.gotmp\go-build3954299874\b242\_pkg_.a
+packagefile github.com/goccy/go-yaml/token=E:\Code\Go\go-review\.gotmp\go-build3954299874\b240\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile maps=E:\Code\Go\go-review\.gotmp\go-build3954299874\b169\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile os=E:\Code\Go\go-review\.gotmp\go-build3954299874\b049\_pkg_.a
+packagefile path/filepath=E:\Code\Go\go-review\.gotmp\go-build3954299874\b189\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile sort=E:\Code\Go\go-review\.gotmp\go-build3954299874\b079\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a
+packagefile unicode=E:\Code\Go\go-review\.gotmp\go-build3954299874\b046\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

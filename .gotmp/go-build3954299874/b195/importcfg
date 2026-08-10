@@ -1,0 +1,9 @@
+# import config
+packagefile encoding/json=E:\Code\Go\go-review\.gotmp\go-build3954299874\b196\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/gorilla/mux=E:\Code\Go\go-review\.gotmp\go-build3954299874\b198\_pkg_.a
+packagefile log=E:\Code\Go\go-review\.gotmp\go-build3954299874\b072\_pkg_.a
+packagefile math/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b117\_pkg_.a
+packagefile net/http=E:\Code\Go\go-review\.gotmp\go-build3954299874\b074\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a

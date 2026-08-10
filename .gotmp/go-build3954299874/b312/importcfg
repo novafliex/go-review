@@ -1,0 +1,5 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile golang.org/x/text/transform=E:\Code\Go\go-review\.gotmp\go-build3954299874\b313\_pkg_.a
+packagefile golang.org/x/text/unicode/bidi=E:\Code\Go\go-review\.gotmp\go-build3954299874\b314\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

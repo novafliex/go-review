@@ -1,0 +1,9 @@
+# import config
+packagefile crypto/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b086\_pkg_.a
+packagefile crypto/subtle=E:\Code\Go\go-review\.gotmp\go-build3954299874\b111\_pkg_.a
+packagefile encoding/base64=E:\Code\Go\go-review\.gotmp\go-build3954299874\b168\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile golang.org/x/crypto/blowfish=E:\Code\Go\go-review\.gotmp\go-build3954299874\b342\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a

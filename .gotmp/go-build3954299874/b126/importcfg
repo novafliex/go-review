@@ -1,0 +1,22 @@
+# import config
+importmap golang.org/x/crypto/cryptobyte=vendor/golang.org/x/crypto/cryptobyte
+importmap golang.org/x/crypto/cryptobyte/asn1=vendor/golang.org/x/crypto/cryptobyte/asn1
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/ecdh=E:\Code\Go\go-review\.gotmp\go-build3954299874\b121\_pkg_.a
+packagefile crypto/elliptic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b127\_pkg_.a
+packagefile crypto/internal/boring=E:\Code\Go\go-review\.gotmp\go-build3954299874\b087\_pkg_.a
+packagefile crypto/internal/boring/bbig=E:\Code\Go\go-review\.gotmp\go-build3954299874\b128\_pkg_.a
+packagefile crypto/internal/fips140/ecdsa=E:\Code\Go\go-review\.gotmp\go-build3954299874\b129\_pkg_.a
+packagefile crypto/internal/fips140/nistec=E:\Code\Go\go-review\.gotmp\go-build3954299874\b123\_pkg_.a
+packagefile crypto/internal/fips140cache=E:\Code\Go\go-review\.gotmp\go-build3954299874\b131\_pkg_.a
+packagefile crypto/internal/fips140hash=E:\Code\Go\go-review\.gotmp\go-build3954299874\b133\_pkg_.a
+packagefile crypto/internal/fips140only=E:\Code\Go\go-review\.gotmp\go-build3954299874\b109\_pkg_.a
+packagefile crypto/internal/rand=E:\Code\Go\go-review\.gotmp\go-build3954299874\b113\_pkg_.a
+packagefile crypto/sha512=E:\Code\Go\go-review\.gotmp\go-build3954299874\b135\_pkg_.a
+packagefile crypto/subtle=E:\Code\Go\go-review\.gotmp\go-build3954299874\b111\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile vendor/golang.org/x/crypto/cryptobyte=E:\Code\Go\go-review\.gotmp\go-build3954299874\b136\_pkg_.a
+packagefile vendor/golang.org/x/crypto/cryptobyte/asn1=E:\Code\Go\go-review\.gotmp\go-build3954299874\b139\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math/big=E:\Code\Go\go-review\.gotmp\go-build3954299874\b116\_pkg_.a
+packagefile math/rand/v2=E:\Code\Go\go-review\.gotmp\go-build3954299874\b115\_pkg_.a

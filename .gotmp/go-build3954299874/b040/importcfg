@@ -1,0 +1,6 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile internal/bytealg=E:\Code\Go\go-review\.gotmp\go-build3954299874\b010\_pkg_.a
+packagefile internal/strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b031\_pkg_.a
+packagefile internal/stringslite=E:\Code\Go\go-review\.gotmp\go-build3954299874\b033\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

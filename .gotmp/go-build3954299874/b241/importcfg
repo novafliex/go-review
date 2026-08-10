@@ -1,0 +1,7 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile github.com/goccy/go-yaml/ast=E:\Code\Go\go-review\.gotmp\go-build3954299874\b239\_pkg_.a
+packagefile github.com/goccy/go-yaml/printer=E:\Code\Go\go-review\.gotmp\go-build3954299874\b242\_pkg_.a
+packagefile github.com/goccy/go-yaml/token=E:\Code\Go\go-review\.gotmp\go-build3954299874\b240\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a

@@ -1,0 +1,6 @@
+# import config
+packagefile golang.org/x/net/idna=E:\Code\Go\go-review\.gotmp\go-build3954299874\b311\_pkg_.a
+packagefile net=E:\Code\Go\go-review\.gotmp\go-build3954299874\b170\_pkg_.a
+packagefile net/textproto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b183\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

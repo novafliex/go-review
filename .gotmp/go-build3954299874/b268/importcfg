@@ -1,0 +1,5 @@
+# import config
+packagefile google.golang.org/protobuf/internal/errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b269\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

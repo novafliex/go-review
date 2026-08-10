@@ -1,34 +1,23 @@
-# Day 02：并发模式
+# 2026-08-02｜Go 并发模式
 
-```text
-2026-08-02/
-├── examples/    # 并发模式课程代码，3 个文件
-├── exercises/   # 扇出、扇入、Pipeline 练习
-└── README.md
-```
+## 当天练习
 
-## 快速复习
+生产者消费者、扇出、扇入、Pipeline。
 
-- 生产者-消费者：用 channel 协调生产和处理速度。
-- 扇出：一个任务 channel，多个 goroutine 竞争处理。
-- 扇入：多个生产者，结果汇总到一个 channel。
-- Pipeline：任务拆成多个阶段，阶段之间用 channel 连接。
+**和什么有关：** channel 所有权、结果汇总。
 
-运行全部并发模式示例：
+## 小项目结构
+
+examples/ 模式示例；exercises/ 练习测试。
+
+## 快速复习与运行
 
 ```powershell
-go run ./examples
+go test -race ./2026-08-02/exercises
 ```
 
-重点观察：
+扇出是多人处理，扇入是多路汇总。
 
-1. 每个 channel 由谁关闭？
-2. 扇出中一个订单会被几个 worker 处理？
-3. 扇入为什么要等所有生产者退出后再关闭输出？
-4. Pipeline 的关闭信号怎样逐级传到最后？
+## 常见问题
 
-运行练习测试：
-
-```powershell
-go test -race ./exercises
-```
+扇入要等生产者退出后再关闭输出 channel。

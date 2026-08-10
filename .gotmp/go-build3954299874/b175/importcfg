@@ -1,0 +1,9 @@
+# import config
+packagefile internal/abi=E:\Code\Go\go-review\.gotmp\go-build3954299874\b005\_pkg_.a
+packagefile internal/goarch=E:\Code\Go\go-review\.gotmp\go-build3954299874\b006\_pkg_.a
+packagefile internal/stringslite=E:\Code\Go\go-review\.gotmp\go-build3954299874\b033\_pkg_.a
+packagefile internal/sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b043\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile weak=E:\Code\Go\go-review\.gotmp\go-build3954299874\b132\_pkg_.a

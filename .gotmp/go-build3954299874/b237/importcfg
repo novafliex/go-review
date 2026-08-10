@@ -1,0 +1,13 @@
+# import config
+packagefile bufio=E:\Code\Go\go-review\.gotmp\go-build3954299874\b075\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile log=E:\Code\Go\go-review\.gotmp\go-build3954299874\b072\_pkg_.a
+packagefile mime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b186\_pkg_.a
+packagefile net=E:\Code\Go\go-review\.gotmp\go-build3954299874\b170\_pkg_.a
+packagefile net/textproto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b183\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

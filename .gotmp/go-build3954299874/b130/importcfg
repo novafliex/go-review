@@ -1,0 +1,7 @@
+# import config
+packagefile crypto/internal/fips140/check=E:\Code\Go\go-review\.gotmp\go-build3954299874\b094\_pkg_.a
+packagefile crypto/internal/fips140deps/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b097\_pkg_.a
+packagefile crypto/internal/fips140deps/cpu=E:\Code\Go\go-review\.gotmp\go-build3954299874\b098\_pkg_.a
+packagefile crypto/internal/impl=E:\Code\Go\go-review\.gotmp\go-build3954299874\b099\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

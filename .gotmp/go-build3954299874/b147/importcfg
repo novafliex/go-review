@@ -1,0 +1,3 @@
+# import config
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/internal/fips140/mlkem=E:\Code\Go\go-review\.gotmp\go-build3954299874\b148\_pkg_.a

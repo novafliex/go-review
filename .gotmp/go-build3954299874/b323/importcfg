@@ -1,0 +1,23 @@
+# import config
+importmap golang.org/x/net/http/httpguts=vendor/golang.org/x/net/http/httpguts
+packagefile bufio=E:\Code\Go\go-review\.gotmp\go-build3954299874\b075\_pkg_.a
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile context=E:\Code\Go\go-review\.gotmp\go-build3954299874\b085\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile vendor/golang.org/x/net/http/httpguts=E:\Code\Go\go-review\.gotmp\go-build3954299874\b177\_pkg_.a
+packagefile internal/godebug=E:\Code\Go\go-review\.gotmp\go-build3954299874\b060\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile log=E:\Code\Go\go-review\.gotmp\go-build3954299874\b072\_pkg_.a
+packagefile mime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b186\_pkg_.a
+packagefile net=E:\Code\Go\go-review\.gotmp\go-build3954299874\b170\_pkg_.a
+packagefile net/http=E:\Code\Go\go-review\.gotmp\go-build3954299874\b074\_pkg_.a
+packagefile net/http/httptrace=E:\Code\Go\go-review\.gotmp\go-build3954299874\b190\_pkg_.a
+packagefile net/http/internal=E:\Code\Go\go-review\.gotmp\go-build3954299874\b191\_pkg_.a
+packagefile net/http/internal/ascii=E:\Code\Go\go-review\.gotmp\go-build3954299874\b192\_pkg_.a
+packagefile net/textproto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b183\_pkg_.a
+packagefile net/url=E:\Code\Go\go-review\.gotmp\go-build3954299874\b176\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile sync=E:\Code\Go\go-review\.gotmp\go-build3954299874\b042\_pkg_.a
+packagefile sync/atomic=E:\Code\Go\go-review\.gotmp\go-build3954299874\b044\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a

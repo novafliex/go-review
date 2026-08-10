@@ -1,0 +1,4 @@
+# import config
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile golang.org/x/crypto/bcrypt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b341\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a

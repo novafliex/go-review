@@ -1,0 +1,17 @@
+# import config
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile google.golang.org/protobuf/encoding/protowire=E:\Code\Go\go-review\.gotmp\go-build3954299874\b268\_pkg_.a
+packagefile google.golang.org/protobuf/internal/encoding/messageset=E:\Code\Go\go-review\.gotmp\go-build3954299874\b272\_pkg_.a
+packagefile google.golang.org/protobuf/internal/errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b269\_pkg_.a
+packagefile google.golang.org/protobuf/internal/flags=E:\Code\Go\go-review\.gotmp\go-build3954299874\b275\_pkg_.a
+packagefile google.golang.org/protobuf/internal/genid=E:\Code\Go\go-review\.gotmp\go-build3954299874\b276\_pkg_.a
+packagefile google.golang.org/protobuf/internal/order=E:\Code\Go\go-review\.gotmp\go-build3954299874\b277\_pkg_.a
+packagefile google.golang.org/protobuf/internal/pragma=E:\Code\Go\go-review\.gotmp\go-build3954299874\b274\_pkg_.a
+packagefile google.golang.org/protobuf/internal/strs=E:\Code\Go\go-review\.gotmp\go-build3954299874\b278\_pkg_.a
+packagefile google.golang.org/protobuf/reflect/protoreflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b273\_pkg_.a
+packagefile google.golang.org/protobuf/reflect/protoregistry=E:\Code\Go\go-review\.gotmp\go-build3954299874\b279\_pkg_.a
+packagefile google.golang.org/protobuf/runtime/protoiface=E:\Code\Go\go-review\.gotmp\go-build3954299874\b280\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile reflect=E:\Code\Go\go-review\.gotmp\go-build3954299874\b037\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

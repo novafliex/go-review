@@ -1,0 +1,5 @@
+# import config
+packagefile crypto/internal/constanttime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b102\_pkg_.a
+packagefile crypto/internal/fips140/alias=E:\Code\Go\go-review\.gotmp\go-build3954299874\b093\_pkg_.a
+packagefile crypto/internal/fips140deps/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b097\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

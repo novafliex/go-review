@@ -1,0 +1,8 @@
+# import config
+packagefile internal/abi=E:\Code\Go\go-review\.gotmp\go-build3954299874\b005\_pkg_.a
+packagefile internal/asan=E:\Code\Go\go-review\.gotmp\go-build3954299874\b025\_pkg_.a
+packagefile internal/goarch=E:\Code\Go\go-review\.gotmp\go-build3954299874\b006\_pkg_.a
+packagefile internal/msan=E:\Code\Go\go-review\.gotmp\go-build3954299874\b026\_pkg_.a
+packagefile internal/race=E:\Code\Go\go-review\.gotmp\go-build3954299874\b027\_pkg_.a
+packagefile internal/runtime/math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b028\_pkg_.a
+packagefile internal/runtime/sys=E:\Code\Go\go-review\.gotmp\go-build3954299874\b023\_pkg_.a

@@ -1,0 +1,10 @@
+# import config
+packagefile crypto=E:\Code\Go\go-review\.gotmp\go-build3954299874\b088\_pkg_.a
+packagefile crypto/internal/boring=E:\Code\Go\go-review\.gotmp\go-build3954299874\b087\_pkg_.a
+packagefile crypto/internal/fips140only=E:\Code\Go\go-review\.gotmp\go-build3954299874\b109\_pkg_.a
+packagefile crypto/internal/impl=E:\Code\Go\go-review\.gotmp\go-build3954299874\b099\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile hash=E:\Code\Go\go-review\.gotmp\go-build3954299874\b083\_pkg_.a
+packagefile internal/byteorder=E:\Code\Go\go-review\.gotmp\go-build3954299874\b012\_pkg_.a
+packagefile internal/cpu=E:\Code\Go\go-review\.gotmp\go-build3954299874\b011\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a

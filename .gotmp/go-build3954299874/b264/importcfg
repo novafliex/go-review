@@ -1,0 +1,17 @@
+# import config
+packagefile bytes=E:\Code\Go\go-review\.gotmp\go-build3954299874\b076\_pkg_.a
+packagefile encoding/base64=E:\Code\Go\go-review\.gotmp\go-build3954299874\b168\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile encoding/hex=E:\Code\Go\go-review\.gotmp\go-build3954299874\b166\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile go.mongodb.org/mongo-driver/v2/internal/binaryutil=E:\Code\Go\go-review\.gotmp\go-build3954299874\b265\_pkg_.a
+packagefile go.mongodb.org/mongo-driver/v2/internal/bsoncoreutil=E:\Code\Go\go-review\.gotmp\go-build3954299874\b266\_pkg_.a
+packagefile go.mongodb.org/mongo-driver/v2/internal/decimal128=E:\Code\Go\go-review\.gotmp\go-build3954299874\b263\_pkg_.a
+packagefile io=E:\Code\Go\go-review\.gotmp\go-build3954299874\b048\_pkg_.a
+packagefile math=E:\Code\Go\go-review\.gotmp\go-build3954299874\b039\_pkg_.a
+packagefile sort=E:\Code\Go\go-review\.gotmp\go-build3954299874\b079\_pkg_.a
+packagefile strconv=E:\Code\Go\go-review\.gotmp\go-build3954299874\b040\_pkg_.a
+packagefile strings=E:\Code\Go\go-review\.gotmp\go-build3954299874\b077\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a
+packagefile unicode/utf8=E:\Code\Go\go-review\.gotmp\go-build3954299874\b041\_pkg_.a

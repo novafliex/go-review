@@ -1,0 +1,7 @@
+# import config
+packagefile crypto/cipher=E:\Code\Go\go-review\.gotmp\go-build3954299874\b089\_pkg_.a
+packagefile encoding/binary=E:\Code\Go\go-review\.gotmp\go-build3954299874\b081\_pkg_.a
+packagefile errors=E:\Code\Go\go-review\.gotmp\go-build3954299874\b003\_pkg_.a
+packagefile golang.org/x/crypto/internal/alias=E:\Code\Go\go-review\.gotmp\go-build3954299874\b302\_pkg_.a
+packagefile math/bits=E:\Code\Go\go-review\.gotmp\go-build3954299874\b032\_pkg_.a
+packagefile runtime=E:\Code\Go\go-review\.gotmp\go-build3954299874\b009\_pkg_.a

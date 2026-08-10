@@ -1,0 +1,6 @@
+# import config
+packagefile encoding/asn1=E:\Code\Go\go-review\.gotmp\go-build3954299874\b137\_pkg_.a
+packagefile encoding/hex=E:\Code\Go\go-review\.gotmp\go-build3954299874\b166\_pkg_.a
+packagefile fmt=E:\Code\Go\go-review\.gotmp\go-build3954299874\b002\_pkg_.a
+packagefile math/big=E:\Code\Go\go-review\.gotmp\go-build3954299874\b116\_pkg_.a
+packagefile time=E:\Code\Go\go-review\.gotmp\go-build3954299874\b059\_pkg_.a
