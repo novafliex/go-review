@@ -15,9 +15,9 @@ type Response struct {
 type User struct {
 	ID        int    `json:"id"`
 	Username  string `json:"username"`
-	Password  string `json:"password"`
+	Password  string `json:"password,omitempty"`
 	Email     string `json:"email"`
 	Phone     string `json:"phone"`
-	Role      string `json:"role"`
+	Role      string `json:"role,omitempty"`
 	CreatedAt string `json:"created_at"`
 }

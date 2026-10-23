@@ -181,7 +181,7 @@ func login(c *gin.Context) {
 		ErrorResponse(c, 401, "username or password is incorrect")
 		return
 	}
-	passwordLength := len([]rune(req.Password))
+	passwordLength := len([]byte(req.Password))
 	if passwordLength < 6 || passwordLength > 72 {
 		ErrorResponse(c, 401, "username or password is incorrect")
 		return

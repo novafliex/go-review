@@ -8,12 +8,12 @@ import (
 
 // 模拟事务对象
 type MockTx struct {
-	commited   bool
+	committed  bool
 	rolledBack bool
 }
 
 func (tx *MockTx) Commit() error {
-	tx.commited = true
+	tx.committed = true
 	fmt.Println("[事务日志]:成功提交!")
 	return nil
 }
@@ -28,7 +28,7 @@ func (tx *MockTx) Rollback() error {
 type MockDB struct{}
 
 func (db *MockDB) BeginTx(ctx context.Context) (*MockTx, error) {
-	fmt.Println("[事务日志]:开启新事物!")
+	fmt.Println("[事务日志]:开启新事务!")
 	return &MockTx{}, nil
 }
 
@@ -44,10 +44,17 @@ func (store *Store) execTx(ctx context.Context, fn func(tx *MockTx) error) error
 		return err
 	}
 
+	// 即使业务发生 panic，也尝试释放事务。
+	defer func() {
+		if !tx.committed && !tx.rolledBack {
+			_ = tx.Rollback()
+		}
+	}()
+
 	err = fn(tx)
 	if err != nil {
 		if rbErr := tx.Rollback(); rbErr != nil {
-			return fmt.Errorf("tx err: %v, rb err: %v", err, rbErr)
+			return errors.Join(err, rbErr)
 		}
 		return err
 	}
@@ -62,6 +69,9 @@ type TransferParams struct {
 }
 
 func (store *Store) TransferTx(ctx context.Context, arg TransferParams) error {
+	if arg.Amount <= 0 {
+		return errors.New("amount must be positive")
+	}
 	return store.execTx(ctx, func(tx *MockTx) error {
 		fmt.Println("--步骤--")
 

@@ -8,6 +8,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"golang.org/x/crypto/bcrypt"
 )
 
 // 查找商品
@@ -424,6 +425,17 @@ func createUser(c *gin.Context) {
 		})
 		return
 	}
+	if len(newUser.Password) < 6 || len(newUser.Password) > 72 {
+		c.JSON(http.StatusBadRequest, Response{Code: 400, Message: "password must be 6 to 72 bytes"})
+		return
+	}
+	hashedPassword, hashErr := bcrypt.GenerateFromPassword([]byte(newUser.Password), bcrypt.DefaultCost)
+	if hashErr != nil {
+		c.JSON(http.StatusInternalServerError, Response{Code: 500, Message: "hash password failed"})
+		return
+	}
+	newUser.Password = string(hashedPassword)
+
 	//用户的role应该默认设置为普通
 	newUser.Role = "user"
 
@@ -453,6 +465,7 @@ func createUser(c *gin.Context) {
 	}
 
 	newUser.ID = int(id)
+	newUser.Password = ""
 
 	c.JSON(http.StatusCreated, Response{
 		Code:    201,
@@ -493,12 +506,22 @@ func updateUser(c *gin.Context) {
 		return
 	}
 
-	result, err := DB.Exec("update users set username = ?, password = ?, email = ?, phone = ?, role = ? where id = ?",
+	if len(updatedUser.Password) < 6 || len(updatedUser.Password) > 72 {
+		c.JSON(http.StatusBadRequest, Response{Code: 400, Message: "password must be 6 to 72 bytes"})
+		return
+	}
+	hashedPassword, hashErr := bcrypt.GenerateFromPassword([]byte(updatedUser.Password), bcrypt.DefaultCost)
+	if hashErr != nil {
+		c.JSON(http.StatusInternalServerError, Response{Code: 500, Message: "hash password failed"})
+		return
+	}
+	updatedUser.Password = string(hashedPassword)
+
+	result, err := DB.Exec("update users set username = ?, password = ?, email = ?, phone = ? where id = ?",
 		updatedUser.Username,
 		updatedUser.Password,
 		updatedUser.Email,
 		updatedUser.Phone,
-		updatedUser.Role,
 		id)
 	//Go 在多行参数列表中，最后一个参数后面必须加逗号
 	if err != nil {
@@ -528,6 +551,8 @@ func updateUser(c *gin.Context) {
 		return
 	}
 
+	updatedUser.Password = ""
+	updatedUser.Role = "" // 更新接口不修改角色
 	c.JSON(http.StatusOK, Response{
 		Code:    200,
 		Message: "update user success",

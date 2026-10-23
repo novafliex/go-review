@@ -181,7 +181,7 @@ func login(c *gin.Context) {
 		ErrorResponse(c, 401, "username or password is incorrect")
 		return
 	}
-	passwordLength := len([]rune(req.Password))
+	passwordLength := len([]byte(req.Password))
 	if passwordLength < 6 || passwordLength > 72 {
 		ErrorResponse(c, 401, "username or password is incorrect")
 		return
@@ -190,7 +190,7 @@ func login(c *gin.Context) {
 	// 根据用户名查用户
 	var user User
 
-	err := DB.QueryRow("select id, username, password, email, role, status created_at from users where username = ?", req.Username).Scan(
+	err := DB.QueryRow("select id, username, password, email, role, status, created_at from users where username = ?", req.Username).Scan(
 		&user.ID,
 		&user.Username,
 		&user.Password,
